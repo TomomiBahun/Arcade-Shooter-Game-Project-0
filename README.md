@@ -3,6 +3,7 @@ My First game project
 
 Genre: shooting, Touhou Series, Touhou Danmaku
 - Basic shooting game without openings, level options, conversations etc....
+- Using DxLibrary <https://dxlib.xsrv.jp/index.html>
 
 Things to be added in the next project
 - Design pattern will be improved.
