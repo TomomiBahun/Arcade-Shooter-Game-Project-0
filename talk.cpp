@@ -1,5 +1,6 @@
 #include "GV.h"
 
+/* read file to show texts ... conversation between charactors */
 void read_file() {
 	int fileHandle;
 	//text.index = 0; // if I initialize this property here, I don't get exception...

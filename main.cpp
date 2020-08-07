@@ -35,11 +35,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		DrawGraph(0, 0, img_frame[2], FALSE); // top of the frame
 		DrawGraph(0, 16, img_frame[1], FALSE); // left side of frame
 		DrawGraph(0, 464, img_frame[3], FALSE); // bottom of the frame
-		DrawGraph(416, 0, img_frame[0], FALSE); // title and numbers: right side of frame
-		DrawGraph(32, 360, img_messageBox, TRUE);
+		DrawGraph(416, 0, img_frame[0], TRUE); // title and numbers: right side of frame
+		// DrawGraph(32, 360, img_messageBox, TRUE); // Dialogue Box
 		DrawGraph(frame_x_to + 10, 180, img_power, TRUE);
 		DrawGraph(frame_x_to + 10, 100, img_health, TRUE);
-		//DrawString(32, 360, "Hello C World!", GetColor(255, 25, 25));
 		//read_file();
 		ch_health();
 		ch_power();
@@ -61,9 +60,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			e_health();
 			enemy_count++;
 		}
-
-		/*Draw health bar*/
-
 
 		/*my charactor move*/
 		ch_shot();
