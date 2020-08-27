@@ -6,7 +6,7 @@
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 
-	ChangeWindowMode(TRUE); // commented out while making game...
+	//ChangeWindowMode(TRUE); // commented out while making game...
 	if (DxLib_Init() == -1)
 		return -1;
 
@@ -29,7 +29,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		ClearDrawScreen();
 		
 		/* draw background*/
-		DrawGraph(32, 16, img_background, FALSE);
+		//DrawGraph(32, 16, img_background, FALSE);
 
 		/*draw the game board frame*/
 		DrawGraph(0, 0, img_frame[2], FALSE); // top of the frame

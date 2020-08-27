@@ -161,24 +161,25 @@ void e_shot01() {
 	}
 
 	/*simple bullet like a water fall*/
-	/*int j[8];
+	int j[8];
 	for (int i = 0; i < 8; i++) {
 		j[i] = e_shot_search();
 		if (enemy_count % 30 == 0) {
 			/* properties to graph and regulate the bullet location*/
-			/*enemy.shot[j[i]].flag = 2;
+			enemy.shot[j[i]].flag = 2;
 			enemy.shot[j[i]].angle = PI / 2; // perpendicular to the top and the bottom of the game board
 			enemy.shot[j[i]].x = 56.0 * (i+1); // 
 			enemy.shot[j[i]].y = 100.0;
+			enemy.shot[j[i]].speed = 5.0;
 			enemy.shot[j[i]].color = GetRand(7);
 
 			/* properties to check if the bullet hits my charactor*/
-			/*GetGraphSize(img_bullet01[enemy.shot[j[i]].color], &enemy.shot[j[i]].width, &enemy.shot[j[i]].height);
+			GetGraphSize(img_bullet01[enemy.shot[j[i]].color], &enemy.shot[j[i]].width, &enemy.shot[j[i]].height);
 			enemy.shot[j[i]].width = enemy.shot[j[i]].width / 2;
 			enemy.shot[j[i]].height = enemy.shot[j[i]].height / 2;
 			enemy.shot[j[i]].range = sqrt(enemy.shot[j[i]].width * enemy.shot[j[i]].width + enemy.shot[j[i]].height * enemy.shot[j[i]].height);
 		}
-	}*/
+	}
 
 	// calculate the bullets' location and draw each of them
 	e_calc_shot();
@@ -233,7 +234,7 @@ void e_shot_02() {
 	}
 
 	// random water fall bullets
-	if (enemy_count % 4 == 0) {
+	if (enemy_count % 7 == 0) {
 		k = e_shot_search();
 		if (k != -1) {
 			enemy.shot[k].flag = 1;
@@ -252,7 +253,7 @@ void e_shot_02() {
 	}
 
 	// calculate the bullets' location and draw each of them
-	//e_calc_shot();
+	e_calc_shot();
 
 	/* enemy moves around ramdomly*/
 	if (enemy.motion_flag == 0 && enemy_count % 80) {
@@ -348,7 +349,7 @@ void e_shot_main() {
 	// first round of shots
 	if (stage_count == 0 && enemy.flag == 1) {
 		e_shot00();
-		if (enemy_count == 500 || enemy.health < 2500) {
+		if (enemy_count == 500 || enemy.health < 1200) {
 			stage_count++;
 			enemy_count = 0;
 			set_item(enemy.x, enemy.y, 2, 1); // health
@@ -360,7 +361,7 @@ void e_shot_main() {
 	// second round of shots. Enemy moves around in this round.
 	if (stage_count == 1 && enemy.flag == 1) {
 		e_shot01();
-		if (enemy_count == 500 || enemy.health < 1800) {
+		if (enemy_count == 500 || enemy.health < 1000) {
 			stage_count++;
 			enemy.motion_flag = 0;
 			enemy_count = 0;

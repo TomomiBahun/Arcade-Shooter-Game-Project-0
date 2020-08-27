@@ -11,7 +11,7 @@ typedef struct {
 	int noDamage_time = 40;
 	float x = board_x_middle; // initial position at middle
 	float y = 400.0; // initial position at y = 400.0
-	int health = 3; // default initial health
+	int health = 5; // default initial health
 	int health_max = 8;
 }ch_t;
 
@@ -22,7 +22,7 @@ typedef struct {
 	float y[200];
 	int flag[200]; // 0 or 2
 	int hit_flag[200];
-	float range = 10.0;
+	float range = 8.0;
 	double power = 1.0;
 	double power_max = 9.0;
 }cShot_t;
@@ -46,8 +46,8 @@ typedef struct {
 	float y = 100.0; // initial position at y = 100.0
 	float basePosition_x = board_x_middle;
 	float basePosition_y = 100.0;
-	double health_max = 3000;
-	double health = 3000;
+	double health_max = 1300;
+	double health = 1300;
 	float range = 45.0;
 	int flag = 0; // 0: enemy isn't there, 1: enemy is here
 	const static int width = 129;
