@@ -1,9 +1,9 @@
 # Project0
-Test game project
+My first game project
 
-Genre: shooting, Touhou Series, Touhou Danmaku
-- Basic shooting game without openings, level options, conversations etc....
-- First project to learn basics of building a shooting game
+Genre: shooter game, Touhou Series, Touhou Danmaku
+- Basic shooter game without openings, level options, conversations etc.
+- First project to learn basics of game programming
 - Using DxLibrary <https://dxlib.xsrv.jp/index.html>
 
 Things to be added in the next project
