@@ -1,4 +1,4 @@
-# Project0
+# Arcade-Shooter-Game-Project-0
 My first game project
 
 Genre: shooter game, Touhou Series, Touhou Danmaku
